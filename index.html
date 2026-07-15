@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Asha ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+    text-align:center;
+    overflow-x:hidden;
+    color:#fff;
+}
+
+.hero{
+    padding:60px 20px 30px;
+}
+
+.hero h1{
+    font-size:3rem;
+    animation: glow 2s infinite alternate;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-top:15px;
+}
+
+@keyframes glow{
+    from{ text-shadow:0 0 10px #fff; }
+    to{ text-shadow:0 0 25px #ff0066; }
+}
+
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.gallery img{
+    width:250px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid white;
+    box-shadow:0 0 20px rgba(255,255,255,0.6);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.message{
+    max-width:800px;
+    margin:30px auto;
+    padding:25px;
+    background:rgba(255,255,255,0.15);
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    font-size:1.2rem;
+    line-height:1.8;
+}
+
+.footer{
+    margin:30px;
+    font-size:1.1rem;
+}
+
+.heart{
+    position:fixed;
+    bottom:-20px;
+    color:#ff004c;
+    animation: float 8s linear infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop controls>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hero">
+    <h1>🎂 Happy Birthday Asha ❤️</h1>
+    <p>To the sweetest friend who makes every day brighter ✨</p>
+</div>
+
+<div class="gallery">
+    <img src="photo1.jpg" alt="Asha">
+    <img src="photo2.jpg" alt="Asha">
+    <img src="photo3.jpg" alt="Asha">
+</div>
+
+<div class="message">
+    Dear Asha ❤️,
+
+    <br><br>
+
+    On your special day, I just want to remind you how amazing, kind,
+    beautiful, and precious you are. 🌸
+
+    <br><br>
+
+    Thank you for every smile, every memory, and every moment of friendship.
+    Life becomes brighter when you're around.
+
+    <br><br>
+
+    I hope this birthday brings you endless happiness, success,
+    laughter, and all the love you deserve.
+
+    <br><br>
+
+    Never stop being the wonderful person you are.
+    Keep smiling and shining like the star you are. ✨
+
+    <br><br>
+
+    Happy Birthday once again, Asha! 🎂💖
+</div>
+
+<div class="footer">
+    Made with ❤️ by your best friend
+</div>
+
+<script>
+function createHeart(){
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML='❤️';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(Math.random()*20+15)+'px';
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
